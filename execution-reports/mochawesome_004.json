@@ -1,0 +1,163 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-01-17T16:07:24.349Z",
+    "end": "2024-01-17T16:07:28.922Z",
+    "duration": 4573,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1957d1f7-af97-4750-a1cc-d08a1baeb14d",
+      "title": "",
+      "fullFile": "cypress/e2e/components/uco-c-brand-purpose.int.test.cy.ts",
+      "file": "cypress/e2e/components/uco-c-brand-purpose.int.test.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "44b2449e-7d4b-4120-9b58-0856a2e9b409",
+          "title": "uco-c-brand-purpose",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "h2 title is visible - \"desktop\"",
+              "fullTitle": "uco-c-brand-purpose h2 title is visible - \"desktop\"",
+              "timedOut": null,
+              "duration": 1870,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('@purpose').find('h2').should('exist').should('not.be.null');",
+              "err": {},
+              "uuid": "11b206bb-ab54-4979-85fc-a226166c01a2",
+              "parentUUID": "44b2449e-7d4b-4120-9b58-0856a2e9b409",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Paragraph is visible - \"desktop\"",
+              "fullTitle": "uco-c-brand-purpose Paragraph is visible - \"desktop\"",
+              "timedOut": null,
+              "duration": 926,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('@purpose').find('p').should('exist').should('not.be.null');",
+              "err": {},
+              "uuid": "49fe2c68-36eb-49dc-8db4-e3dea67ca47f",
+              "parentUUID": "44b2449e-7d4b-4120-9b58-0856a2e9b409",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Brand Purpose article count is 3 - \"desktop\"",
+              "fullTitle": "uco-c-brand-purpose Brand Purpose article count is 3 - \"desktop\"",
+              "timedOut": null,
+              "duration": 791,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('@purpose')\n    .find('[data-testid=\"uco-c-brand-purpose-items\"] article')\n    .should('have.length', 3);",
+              "err": {},
+              "uuid": "d189403b-2a10-429a-ba0f-282555a6fb5a",
+              "parentUUID": "44b2449e-7d4b-4120-9b58-0856a2e9b409",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Brand Purpose article attributes - \"desktop\"",
+              "fullTitle": "uco-c-brand-purpose Brand Purpose article attributes - \"desktop\"",
+              "timedOut": null,
+              "duration": 873,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('@purpose')\n    .find('[data-testid=\"uco-c-brand-purpose-items\"] article')\n    .each(function ($article, index) {\n    if (index <= 1) {\n        // h2 title\n        cy.wrap($article).find('h2').should('exist').should('not.be.null');\n        // Body text\n        cy.wrap($article)\n            .find('[data-testid=\"uol-c-card-body\"] p')\n            .first()\n            .should('exist')\n            .should('not.be.null');\n        // Video hyperlink\n        cy.wrap($article).find('a[data-testid=\"uol-c-button\"]').should('have.attr', 'href');\n        // Download link\n        cy.wrap($article).find('a[data-testid=\"uol-c-link\"]').should('have.attr', 'href');\n    }\n});",
+              "err": {},
+              "uuid": "5f83f42a-6ac7-47d3-b89a-c4d9da1d8857",
+              "parentUUID": "44b2449e-7d4b-4120-9b58-0856a2e9b409",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "11b206bb-ab54-4979-85fc-a226166c01a2",
+            "49fe2c68-36eb-49dc-8db4-e3dea67ca47f",
+            "d189403b-2a10-429a-ba0f-282555a6fb5a",
+            "5f83f42a-6ac7-47d3-b89a-c4d9da1d8857"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4460,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/execution-reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

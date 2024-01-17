@@ -10,3 +10,6 @@ jobs:
       - name: Inputs validation check
         run: |
           npm install -g pnpm
+          pnpx mochawesome-merge ./execution-reports/*.json -o execution-reports/index.json
+          cd execution-reports
+          ls
