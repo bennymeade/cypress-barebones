@@ -6,6 +6,6 @@
   "author": "bennymeade <brendan_meade@yahoo.co.uk>",
   "license": "MIT",
   "devDependencies": {
-    "cypress": "13.6.3"
+    "cypress": "14.2.0"
   }
 }
